@@ -68,9 +68,13 @@ class Decoder():
     def get_command_list(self: Self, commands: list) -> None:
         self._list_commands: list = commands
  
+    def input(self: Self) -> None:
+        self._list_commands: list = [int(x) for x in input().split()]
+        
         
 if __name__ == '__main__':
-    decoder: Decoder = Decoder([21, 46])
+    decoder: Decoder = Decoder()
+    decoder.input()
     print(decoder.decode())
     # decoder.get_command_list([0, 1])
     # print(decoder.decode())
