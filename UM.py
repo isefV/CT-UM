@@ -71,7 +71,7 @@ class UniversalMachine():
             if key == 'Y':
                 continue
             snapshot += f'{self._var_env[key]} '
-        snapshot += f'{self._var_env['Y']}'
+        snapshot += f'{self._var_env["Y"]}'
         self._snapshots.append(snapshot)
     
     def output(self: Self) -> str:

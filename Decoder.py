@@ -22,8 +22,9 @@ class Decoder():
     def label_decoder(self: Self, num: int) -> str:
         if not num:
             return ''
+        num -= 1
         labels: str = 'ABCDE'
-        return labels[(num % 5) - 1] + str((num//5) + 1)
+        return labels[num % 5] + str((num//5) + 1)
     
     def command_decoder(self: Self, cmd: int, var: str) -> str:
         if cmd > 2:
